@@ -1,92 +1,90 @@
-describe("Stings Methods", () => {
-  const str1 = "FirstType";
-  const str2 = 'secondType"';
-  const str3 = `thirdType ${str1}`;
-  it.skip("String Methods", () => {
-    const textLength = str1.length;
-    console.log(textLength);
+// String Methods
 
-    //slice()
-    let slicedString = str3.slice(0, 6);
-    console.log(slicedString);
+const str1 = "FirstType";
+const str2 = 'secondType"';
+const str3 = `thirdType ${str1}`;
 
-    slicedString = str3.slice(0, str3.length - 2);
-    console.log(slicedString);
+// Length
+const textLength = str1.length;
+console.log(textLength);
 
-    slicedString = str3.slice(6, str3.length - 2);
-    console.log(slicedString);
+//slice()
+let slicedString = str3.slice(0, 6);
+console.log(slicedString);
 
-    //substring()
-    let subString = str3.substring(0, 6);
-    console.log(subString);
+slicedString = str3.slice(0, str3.length - 2);
+console.log(slicedString);
 
-    subString = str3.substring(0, str3.length - 2);
-    console.log(subString);
+slicedString = str3.slice(6, str3.length - 2);
+console.log(slicedString);
 
-    subString = str3.substring(6, str3.length - 2);
-    console.log(subString);
-  });
+//substring()
+let subString = str3.substring(0, 6);
+console.log(subString);
 
-  it.only("stringMethods", () => {
-    // index of stringObject [0]
-    console.log("indexOf");
-    let string = "Apple";
-    console.log(string.indexOf("l"));
+subString = str3.substring(0, str3.length - 2);
+console.log(subString);
 
-    // charAt(0)
-    console.log("charAt");
-    console.log(string.charAt(0));
+subString = str3.substring(6, str3.length - 2);
+console.log(subString);
 
-    //charCodeAt()
-    console.log("charCodeAt"); // a - z : 97 - 122
-    console.log(string.charCodeAt(2));
+// index of stringObject [0]
+console.log("indexOf");
+let string = "Apple";
+console.log(string.indexOf("l"));
 
-    // toUpperCase()
-    console.log("toUpperCase");
-    console.log(string.toUpperCase());
+// charAt(0)
+console.log("charAt");
+console.log(string.charAt(0));
 
-    // toLowerCase()
-    console.log("toLowerCase");
-    console.log(string.toLowerCase());
+//charCodeAt()
+console.log("charCodeAt"); // a - z : 97 - 122
+console.log(string.charCodeAt(2));
 
-    // includes(value)
-    console.log("includes");
-    console.log(string.includes("p"));
+// toUpperCase()
+console.log("toUpperCase");
+console.log(string.toUpperCase());
 
-    // split(",")
-    console.log("split");
-    console.log(string.split("l"));
+// toLowerCase()
+console.log("toLowerCase");
+console.log(string.toLowerCase());
 
-    // join("-")
-    console.log("join");
-    const symbols = ["a", "b"];
-    console.log(symbols.join("k"));
+// includes(value)
+console.log("includes");
+console.log(string.includes("p"));
 
-    // trim()
-    console.log("trim");
-    let color = " Purple ";
-    let trimResult = color.trim();
-    console.log(trimResult, trimResult.length);
+// split(",")
+console.log("split");
+console.log(string.split("l"));
 
-    trimResult = color.trimStart();
-    console.log(trimResult, trimResult.length);
-    trimResult = color.trimEnd();
-    console.log(trimResult, trimResult.length);
+// join("-")
+console.log("join");
+const symbols = ["a", "b"];
+console.log(symbols.join("k"));
 
-    // replace(val1 , val2)
-    console.log("replace");
-    console.log(string.replace("A", "l"));
+// trim()
+console.log("trim");
+let color = " Purple ";
+let trimResult = color.trim();
+console.log(trimResult, trimResult.length);
 
-    // repeat(number)
-    console.log("repeat");
-    console.log(string.repeat(2));
+trimResult = color.trimStart();
+console.log(trimResult, trimResult.length);
+trimResult = color.trimEnd();
+console.log(trimResult, trimResult.length);
 
-    const stringWithSingleQuotes = `He said, \'Hello!\'`;
-    const stringWithDoubleQuotes = `She said, \"Hi!\"`;
+// replace(val1 , val2)
+console.log("replace");
+console.log(string.replace("A", "l"));
 
-    const unicodeString = "Hello, \u{1F60A}"; // Using Unicode escape sequence
-    console.log(unicodeString); // Output: Hello, 😊
-    const unicodeString2 = "Hello,\n \u{1F60A}";
-    console.log(unicodeString2);
-  });
-});
+// repeat(number)
+console.log("repeat");
+console.log(string.repeat(2));
+
+const stringWithSingleQuotes = `He said, \'Hello!\'`;
+const stringWithDoubleQuotes = `She said, \"Hi!\"`;
+
+const unicodeString = "Hello, \u{1F60A}"; // Using Unicode escape sequence
+console.log(unicodeString); // Output: Hello, 😊
+const unicodeString2 = "Hello,\n \u{1F60A}";
+console.log(unicodeString2);

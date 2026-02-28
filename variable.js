@@ -1,55 +1,53 @@
-describe("variable debug", () => {
-  it("var, let, const debug", () => {
-    var a = 10;
-    function test() {
-      var b = 20;
-    }
-    console.log(a);
+// Var
 
-    var pop = "hi js";
-    function rel() {
-      var top = "Hello Js";
-      console.log(top);
-    }
-    rel();
-    console.log(pop); //.............................pop is globally defined variable
-    // console.log(top); //..........................this is giving error because top is not global defined variable it is functionally defined variable
+var a = 10;
+function test() {
+  var b = 20;
+}
+console.log(a);
 
-    var browser = "chrome";
-    var browser = "firefox";
-    browser = "edge";
-    console.log(browser); //.........................redeclaration and reintialization both are allowed with var keyword.
+var pop = "hi js";
+function rel() {
+  var top = "Hello Js";
+  console.log(top);
+}
+rel();
+console.log(pop); //.............................pop is globally defined variable
+// console.log(top); //..........................this is giving error because top is not global defined variable it is functionally defined variable
 
-    var g;
-    console.log(g); //undefined
-    g = "Hello World";
-    console.log(g);
+var browser = "chrome";
+var browser = "firefox";
+browser = "edge";
+console.log(browser); //.........................redeclaration and reintialization both are allowed with var keyword.
 
-    // let - block scoped
-    let m = "Hey Janki";
-    let time = 4;
-    if (time > 3) {
-      let msg = "How are you?";
-      console.log(msg);
-    }
-    // console.log(msg); //...........................let is blocked scoped so can not be used outside the perticular block
-    console.log(m);
+var g;
+console.log(g); //undefined
+g = "Hello World";
+console.log(g);
 
-    // const
-    const mg = "Hey naveen";
-    // mg = "Hey Tom";  //............................you can not reassign value to const like let and var
-    console.log(mg);
+// let - block scoped
+let m = "Hey Janki";
+let time = 4;
+if (time > 3) {
+  let msg = "How are you?";
+  console.log(msg);
+}
+// console.log(msg); //...........................let is blocked scoped so can not be used outside the perticular block
+console.log(m);
 
-    const days = 7;
-    console.log(100 * days);
+// const
+const mg = "Hey naveen";
+// mg = "Hey Tom";  //............................you can not reassign value to const like let and var
+console.log(mg);
 
-    var p;
-    console.log(p);
+const days = 7;
+console.log(100 * days);
 
-    let q;
-    console.log(q);
+var p;
+console.log(p);
 
-    const o = 100; //.................................Const declaration must be initialized.
-    console.log(o);
-  });
-});
+let q;
+console.log(q);
+
+const o = 100; //.................................Const declaration must be initialized.
+console.log(o);
