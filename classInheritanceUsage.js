@@ -6,59 +6,64 @@ import {
   Rabbit,
 } from "./classInheritance.js";
 
-describe("Class Inheritance", () => {
-  it.skip("Class inheritance", async () => {
-    const name = "Janki";
-    const place = "oxhey park";
-    const person = new People(name);
-    const runner = new HealthyPeople(name, place);
-    const olympicRunner = new Athlete(name, place);
-    console.log("what People class can do?");
-    person.breath();
+// First Example
+console.log("Example 1");
 
-    console.log("what HelthyPeople class can do?");
-    runner.breath();
-    runner.run();
+const name1 = "Janki";
+const place1 = "oxhey park";
 
-    console.log("what Athlete class can do?");
-    olympicRunner.breath();
-    olympicRunner.run();
-    olympicRunner.quickRun();
-  });
+const person1 = new People(name1);
+const runner1 = new HealthyPeople(name1, place1);
+const olympicRunner1 = new Athlete(name1, place1);
 
-  it.skip("Class inheritance", async () => {
-    const name = "Olga";
-    const place = "woods";
-    const person = new People(name);
-    const runner = new HealthyPeople(name, place);
-    const olympicRunner = new Athlete(name);
-    console.log("what People class can do?");
-    person.breath();
+console.log("What People class can do?");
+person1.breath();
 
-    console.log("what HelthyPeople class can do?");
-    runner.breath();
-    runner.run();
+console.log("What HealthyPeople class can do?");
+runner1.breath();
+runner1.run();
 
-    console.log("what Athlete class can do?");
-    olympicRunner.breath();
-    olympicRunner.run();
-    olympicRunner.quickRun();
-  });
-});
+console.log("What Athlete class can do?");
+olympicRunner1.breath();
+olympicRunner1.run();
+olympicRunner1.quickRun();
 
-it("Class Rabbit Inheritance", async () => {
-  const name = "Rabbit";
-  const speed = 10;
-  const place = "woods";
-  const animal = new Animal(name, speed);
-  const rabbit = new Rabbit(name, speed, place);
+// Second Example
 
-  console.log("what Animal class can do");
-  animal.walk();
-  animal.stop();
+console.log("\n Example 2");
 
-  console.log("What Rabbit class can do");
-  rabbit.walk();
-  rabbit.hide();
-  rabbit.stop();
-});
+const name2 = "Olga";
+const place2 = "woods";
+const person2 = new People(name2);
+const runner2 = new HealthyPeople(name2, place2);
+const olympicRunner2 = new Athlete(name2);
+console.log("what People class can do?");
+person2.breath();
+
+console.log("what HelthyPeople class can do?");
+runner2.breath();
+runner2.run();
+
+console.log("what Athlete class can do?");
+olympicRunner2.breath();
+olympicRunner2.run();
+olympicRunner2.quickRun();
+
+//---Rabbit Inheritance---
+
+console.log("\n Rabbit Inheritance");
+
+const name = "Rabbit";
+const speed = 10;
+const place = "woods";
+const animal = new Animal(name, speed);
+const rabbit = new Rabbit(name, speed, place);
+
+console.log("what Animal class can do");
+animal.walk();
+animal.stop();
+
+console.log("What Rabbit class can do");
+rabbit.walk();
+rabbit.hide();
+rabbit.stop();

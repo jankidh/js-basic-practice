@@ -1,55 +1,52 @@
-describe("Debug Linear and Binary Search", () => {
-  it.skip("Linear Search", () => {
-    const linearSearch = (target, array) => {
-      let result = null;
-      for (let i = 0; i < array.length; i++) {
-        if (array[i] === target) {
-          result = array[i];
-          break;
-        }
-      }
-      return result;
-    };
+// Linear Search:
+const linearSearch = (target, array) => {
+  let result = null;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      result = array[i];
+      break;
+    }
+  }
+  return result;
+};
 
-    const target = 9;
-    const array = [5, 6, 7, 8];
-    const test = linearSearch(target, array);
-    console.log("test: " + test);
-  });
+const linearTarget = 9;
+const linearArray = [5, 6, 7, 8];
+const linearResult = linearSearch(linearTarget, linearArray);
+console.log("Linear Search Result:", linearResult);
 
-  it("Binary Search — obvious stop", () => {
-    const binarySearch = (target, array) => {
-      let left = 0;
-      let right = array.length - 1;
+//Binary Search
 
-      while (left <= right) {
-        const mid = Math.floor((left + right) / 2);
+const binarySearch = (target, array) => {
+  let left = 0;
+  let right = array.length - 1;
 
-        console.log(`CHECK → left=${left}, mid=${mid}, right=${right}`);
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
 
-        if (array[mid] === target) {
-          console.log(`FOUND → value=${array[mid]} at index=${mid}`);
-          console.log("STOP SEARCH");
-          return array[mid];
-        }
+    console.log(`CHECK → left=${left}, mid=${mid}, right=${right}`);
 
-        if (array[mid] < target) {
-          console.log("→ move RIGHT");
-          left = mid + 1;
-        } else {
-          console.log("→ move LEFT");
-          right = mid - 1;
-        }
-      }
+    if (array[mid] === target) {
+      console.log(`FOUND → value=${array[mid]} at index=${mid}`);
+      console.log("STOP SEARCH");
+      return array[mid];
+    }
 
-      console.log(" NOT FOUND → STOP SEARCH");
-      return null;
-    };
+    if (array[mid] < target) {
+      console.log("→ move RIGHT");
+      left = mid + 1;
+    } else {
+      console.log("→ move LEFT");
+      right = mid - 1;
+    }
+  }
 
-    const target = 4;
-    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  console.log(" NOT FOUND → STOP SEARCH");
+  return null;
+};
 
-    const result = binarySearch(target, array);
-    console.log("RESULT:", result);
-  });
-});
+const binaryTarget = 4;
+const binaryArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const binaryResult = binarySearch(binaryTarget, binaryArray);
+console.log("Binary Search Result:", binaryResult);

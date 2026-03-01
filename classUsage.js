@@ -1,27 +1,25 @@
 import Calc from "./class.js";
 
-describe("class debugging", () => {
-  it("class debug", () => {
-    const a = 5;
-    const b = 9;
-    const calc = new Calc(a, b);
+// Class Usage:
 
-    const c = calc.add();
-    console.log(c);
+const a = 5;
+const b = 9;
+const calc = new Calc(a, b);
 
-    const d = calc.sub();
-    console.log(d);
+const c = calc.add();
+console.log(c);
 
-    const e = calc.mul();
-    console.log(e);
+const d = calc.sub();
+console.log(d);
 
-    const f = calc.div();
-    console.log(f);
+const e = calc.mul();
+console.log(e);
 
-    const g = calc.remainder();
-    console.log(g);
+const f = calc.div();
+console.log(f);
 
-    const h = calc.floorDiv();
-    console.log(h);
-  });
-});
+const g = calc.remainder();
+console.log(g);
+
+const h = calc.floorDiv();
+console.log(h);
